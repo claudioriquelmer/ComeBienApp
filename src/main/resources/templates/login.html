@@ -8,6 +8,8 @@
               href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css"
               integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u"
               crossorigin="anonymous">
+        
+        <link rel="stylesheet" type="text/css" href="static/css/login.css" th:href="@{/css/login.css}">
 
     </head>
     <body>
@@ -34,7 +36,7 @@
             <div class = "row">
                 <div class = "col-md-6 col-md-offset-3">
 
-                    <h1> Página de Ingreso </h1>
+                    <h1> Pagina de Ingreso </h1>
                     <form th:action="@{/login}" method="post">
 
                         <!-- mensaje de Error -->
@@ -44,11 +46,11 @@
 
                         <!-- logout message -->
                         <div th:if="${param.logout}">
-                            <div class="alert alert-info">Te has Logeado con éxito.</div>
+                            <div class="alert alert-info">Te has Logeado con exito.</div>
                         </div>
 
                         <div class = "form-group">
-                            <label for ="username"> Username</label> :
+                            <label for ="username"> Usuario</label> :
                             <input type="text" class = "form-control" id ="username" name = "username"
                                    placeholder="Ingresa tu Email ID" autofocus="autofocus">
                         </div>
