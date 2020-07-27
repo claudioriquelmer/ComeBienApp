@@ -25,22 +25,20 @@
                     </button>
                     <a class="navbar-brand" href="#" th:href="@{/}">Registro y Login</a>
                 </div>
-                <div class="yz-widget" data-calculator-type="bmi" data-language="es" data-unit-system="metric" data-background-color="#EEEEEE" data-text-color="#212121" data-primary-color="#03A9F4" data-alternate-background-color="#FFFFFF" data-alternate-text-color="#FFFFFF" data-secondary-color="#FFC107"><span class="yz-copyright">Powered by <a href="https://www.yazio.com/es/calculadora-imc">YAZIO</a></span></div>
-                <script src="https://widget.yazio.com/calculator.js" async></script>
-                <div id="navbar" class="collapse navbar-collapse">
-                    <ul class="nav navbar-nav">
-                        <li sec:authorize="isAuthenticated()"><a th:href="@{/logout}">Salir</a></li>
-                    </ul>
-                </div>
+                <ul class="nav navbar-nav">
+                    <li sec:authorize="isAuthenticated()"><a th:href="@{/logout}">Salir</a></li>
+                </ul>
             </div>
-        </nav>
+            <div class="yz-widget" data-calculator-type="bmi" data-language="es" data-unit-system="metric" data-background-color="#EEEEEE" data-text-color="#212121" data-primary-color="#03A9F4" data-alternate-background-color="#FFFFFF" data-alternate-text-color="#FFFFFF" data-secondary-color="#FFC107"><span class="yz-copyright">Powered by <a href="https://www.yazio.com/es/calculadora-imc">YAZIO</a></span></div>
+                <script src="https://widget.yazio.com/calculator.js" async></script>
+    </nav>
 
-        <br>
-        <br>
+    <br>
+    <br>
 
-        <div class="container">
-            <h1>Alimentación Sana</h1>
-            En esta Parte ...Calcular IMC de <span sec:authentication="principal.username"> Usuario</span>
-        </div>
-    </body>
+    <div class="container">
+        <h1>Alimentación Sana</h1>
+        En esta Parte ...Calcular IMC de <span sec:authentication="principal.username"> Usuario</span>
+    </div>
+</body>
 </html>
